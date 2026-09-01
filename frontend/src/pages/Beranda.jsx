@@ -12,7 +12,11 @@ function Beranda() {
         <h1 className="beranda-title">Kelola aset & keluhan kantor jadi lebih mudah?</h1>
         <p className="beranda-desc">Lapor kerusakan alat, pantau progress perbaikan, dan kelola aset kantor dalam satu sistem.</p>
         <button className="beranda-btn" onClick={() => navigate('/login')}>Login</button>
-        <img src="/cat.gif" alt="kucing lucu" className="beranda-cat" />
+                <img src="/cat.gif" alt="kucing lucu" className="beranda-cat" />
+      </div>
+
+      <div className="beranda-footer">
+        Dibuat oleh Wahyuni Septianingsih
       </div>
     </div>
   )

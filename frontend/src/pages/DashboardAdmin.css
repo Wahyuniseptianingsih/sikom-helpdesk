@@ -196,3 +196,81 @@
   background: #E0D5EE;
   color: #6B4E9E;
 }
+.tab-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.3);
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: #fff;
+  color: #6B4E9E;
+}
+.chart-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.chart-card h3 {
+  margin-top: 0;
+  color: #6B4E9E;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.bar-label {
+  width: 90px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+
+.bar-track {
+  flex: 1;
+  background: #f0ebf7;
+  border-radius: 20px;
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  transition: width 0.4s ease;
+}
+
+.bar-fill.open { background: #e6a83d; }
+.bar-fill.diproses { background: #4a90d9; }
+.bar-fill.selesai { background: #4caf50; }
