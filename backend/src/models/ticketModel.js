@@ -34,7 +34,11 @@ const addLog = (data, callback) => {
 }
 
 const getLogsByTicketId = (ticket_id, callback) => {
-  db.query('SELECT * FROM ticket_log WHERE ticket_id = ? ORDER BY updated_at DESC', [ticket_id], callback)
+  db.query(
+    'SELECT ticket_log.*, users.nama AS teknisi_nama FROM ticket_log JOIN users ON ticket_log.teknisi_id = users.id WHERE ticket_id = ? ORDER BY updated_at DESC',
+    [ticket_id],
+    callback
+  )
 }
 
 module.exports = { getAll, getById, create, updateStatus, remove, addLog, getLogsByTicketId };

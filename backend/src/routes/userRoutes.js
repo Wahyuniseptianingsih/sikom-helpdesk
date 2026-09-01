@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { register, login } = require('../controllers/userController');
-const { verifyToken, isAdmin, isTeknisi, isPegawai } = require('../middleware/authMiddleware');
+const { register, login, getAllUsers } = require('../controllers/userController');
+const { verifyToken, isAdmin, isTeknisi, isPegawai, allowRoles } = require('../middleware/authMiddleware');
 
-router.post('/register', register);
+router.post('/register', verifyToken, allowRoles(1), register);
 router.post('/login', login);
+router.get('/', verifyToken, allowRoles(1), getAllUsers);
 
 router.get('/profile', verifyToken, (req, res) => {
   res.json({ message: 'kamu berhasil akses route yang dilindungi', user: req.user });

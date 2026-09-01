@@ -1,0 +1,107 @@
+.dash-wrap {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #8E7CC3 0%, #C97CB0 50%, #E8A0C4 100%);
+  font-family: 'Quicksand', sans-serif;
+  padding: 24px;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.dash-header h2 {
+  margin: 0;
+}
+
+.dash-logout {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+  .dash-grid { grid-template-columns: 1fr; }
+}
+
+.dash-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.dash-card h3 {
+  margin-top: 0;
+  color: #6B4E9E;
+}
+
+.dash-input, .dash-select, .dash-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid #E0D5EE;
+  margin-bottom: 12px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.dash-btn {
+  width: 100%;
+  padding: 12px;
+  background: #6B4E9E;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.ticket-item {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.ticket-item h4 {
+  margin: 0 0 6px;
+  color: #333;
+}
+
+.ticket-meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge-open { background: #ffe6b3; color: #a56b00; }
+.badge-diproses { background: #bcdcff; color: #0056b3; }
+.badge-selesai { background: #c3f0c3; color: #1a7a1a; }
+
+.badge-low { background: #eee; color: #666; }
+.badge-medium { background: #fff0c2; color: #806600; }
+.badge-high { background: #ffd2d2; color: #a30000; }

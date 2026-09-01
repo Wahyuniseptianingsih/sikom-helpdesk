@@ -1,5 +1,6 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const db = require('../config/db');
 const { findUserByEmail, createUser } = require('../models/userModel');
 
 const register = (req, res) => {
@@ -45,4 +46,11 @@ const login = (req, res) => {
   });
 };
 
-module.exports = { register, login };
+const getAllUsers = (req, res) => {
+  db.query('SELECT users.id, users.nama, users.email, roles.role_name FROM users JOIN roles ON users.role_id = roles.id', (err, result) => {
+    if (err) return res.status(500).json({ message: 'gagal ambil data user' });
+    res.json(result);
+  })
+}
+
+module.exports = { register, login, getAllUsers };
