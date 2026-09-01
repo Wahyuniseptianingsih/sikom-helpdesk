@@ -6,6 +6,11 @@ Dibuat oleh **Wahyuni Septianingsih** (NIM 22SA11A047) - Informatika, Universita
 
 ![Beranda SIKOM](screenshots/01-beranda.png)
 
+## Video Demo
+
+Video demo alur penggunaan sistem dari sisi pegawai, teknisi, dan admin bisa ditonton di sini:
+[Tonton Video Demo](https://drive.google.com/file/d/13Jz_0mCtAjI4HnznMSDgtacJQ7X6fzGm/view?usp=sharing)
+
 ## Kenapa Sistem Ini Dibuat
 
 Di kantor atau instansi, laporan kerusakan alat sering masih dilakukan manual, misal lewat chat atau lisan, sehingga sulit dilacak progressnya dan gampang kelewat. SIKOM dibuat buat menjawab masalah ini dengan mendigitalisasi seluruh alur, dari pelaporan sampai penyelesaian, termasuk pencatatan histori penanganan dan spare part yang dipakai.
