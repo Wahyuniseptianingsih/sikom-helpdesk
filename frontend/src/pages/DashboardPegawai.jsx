@@ -14,6 +14,7 @@ function DashboardPegawai() {
   const navigate = useNavigate()
   const nama = localStorage.getItem('nama')
   const userId = getUserIdFromToken()
+  const [tab, setTab] = useState('lapor')
 
   const [tickets, setTickets] = useState([])
   const [judul, setJudul] = useState('')
@@ -59,8 +60,13 @@ function DashboardPegawai() {
         <button className="dash-logout" onClick={logout}>Logout</button>
       </div>
 
-      <div className="dash-grid">
-        <div className="dash-card">
+      <div className="tab-bar">
+        <button className={`tab-btn ${tab === 'lapor' ? 'active' : ''}`} onClick={() => setTab('lapor')}>Lapor Kerusakan</button>
+        <button className={`tab-btn ${tab === 'tiket' ? 'active' : ''}`} onClick={() => setTab('tiket')}>Tiket Saya ({tickets.length})</button>
+      </div>
+
+      {tab === 'lapor' && (
+        <div className="dash-card" style={{ maxWidth: '500px' }}>
           <h3>Lapor Kerusakan</h3>
           {msg && <p>{msg}</p>}
           <form onSubmit={handleSubmit}>
@@ -79,8 +85,10 @@ function DashboardPegawai() {
             <button className="dash-btn" type="submit">Kirim Laporan</button>
           </form>
         </div>
+      )}
 
-        <div className="dash-card">
+      {tab === 'tiket' && (
+        <div className="dash-card" style={{ maxWidth: '600px' }}>
           <h3>Tiket Saya</h3>
           {tickets.length === 0 && <p>belum ada tiket</p>}
           {tickets.map(t => (
@@ -94,7 +102,7 @@ function DashboardPegawai() {
             </div>
           ))}
         </div>
-      </div>
+      )}
     </div>
   )
 }

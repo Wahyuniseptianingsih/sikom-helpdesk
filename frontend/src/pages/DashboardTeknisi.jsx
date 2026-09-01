@@ -8,6 +8,7 @@ function DashboardTeknisi() {
   const nama = localStorage.getItem('nama')
 
   const [tickets, setTickets] = useState([])
+  const [tab, setTab] = useState('open')
   const [openForm, setOpenForm] = useState(null)
   const [openLog, setOpenLog] = useState(null)
   const [logs, setLogs] = useState([])
@@ -92,6 +93,8 @@ function DashboardTeknisi() {
     navigate('/')
   }
 
+  const filteredTickets = tickets.filter(t => t.status === tab)
+
   return (
     <div className="dash-wrap">
       <div className="dash-header">
@@ -99,10 +102,22 @@ function DashboardTeknisi() {
         <button className="dash-logout" onClick={logout}>Logout</button>
       </div>
 
+      <div className="tab-bar">
+        <button className={`tab-btn ${tab === 'open' ? 'active' : ''}`} onClick={() => setTab('open')}>
+          Open ({tickets.filter(t => t.status === 'open').length})
+        </button>
+        <button className={`tab-btn ${tab === 'diproses' ? 'active' : ''}`} onClick={() => setTab('diproses')}>
+          Diproses ({tickets.filter(t => t.status === 'diproses').length})
+        </button>
+        <button className={`tab-btn ${tab === 'selesai' ? 'active' : ''}`} onClick={() => setTab('selesai')}>
+          Selesai ({tickets.filter(t => t.status === 'selesai').length})
+        </button>
+      </div>
+
       <div className="dash-card">
-        <h3>Semua Tiket</h3>
-        {tickets.length === 0 && <p>belum ada tiket masuk</p>}
-        {tickets.map(t => (
+        <h3>Tiket {tab === 'open' ? 'Open' : tab === 'diproses' ? 'Diproses' : 'Selesai'}</h3>
+        {filteredTickets.length === 0 && <p>tidak ada tiket dengan status ini</p>}
+        {filteredTickets.map(t => (
           <div className="ticket-item" key={t.id}>
             <h4>{t.judul}</h4>
             <div className="ticket-meta">
