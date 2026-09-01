@@ -2,7 +2,7 @@
 
 SIKOM adalah aplikasi web buat mengelola keluhan/kerusakan alat kantor dan manajemen aset, dibuat sebagai bahan tugas akhir. Sistem ini menghubungkan tiga peran: pegawai yang melaporkan kerusakan, teknisi yang menangani laporan, dan admin yang mengawasi semuanya sekaligus mengelola data aset dan user.
 
-Dibuat oleh **Wahyuni Septianingsih** (NIM 22SA11A047) - Informatika, Universitas Amikom Purwokerto.
+Dibuat oleh **Wahyuni Septianingsih
 
 ![Beranda SIKOM](screenshots/01-beranda.png)
 
