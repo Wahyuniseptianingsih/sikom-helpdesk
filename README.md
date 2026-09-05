@@ -1,8 +1,8 @@
 # SIKOM - Sistem Informasi Komplain & Manajemen Aset
 
-SIKOM adalah aplikasi web buat mengelola keluhan/kerusakan alat kantor dan manajemen aset, dibuat sebagai bahan tugas akhir. Sistem ini menghubungkan tiga peran: pegawai yang melaporkan kerusakan, teknisi yang menangani laporan, dan admin yang mengawasi semuanya sekaligus mengelola data aset dan user.
+SIKOM adalah aplikasi web yang dikembangkan secara mandiri untuk melatih dan meningkatkan kemampuan dalam pengembangan sistem informasi, khususnya pengelolaan keluhan/kerusakan alat kantor dan manajemen aset. Dikembangkan menggunakan React, Express.js, dan MySQL dengan fitur role-based access control, autentikasi JWT, serta pengelolaan data aset dan riwayat pemeliharaan. Sistem ini menghubungkan tiga peran: pegawai yang melaporkan kerusakan, teknisi yang menangani laporan, dan admin yang mengawasi semuanya sekaligus mengelola data aset dan user.
 
-Dibuat oleh **Wahyuni Septianingsih
+Dibuat oleh Wahyuni Septianingsih
 
 ![Beranda SIKOM](screenshots/01-beranda.png)
 
